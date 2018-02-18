@@ -19,24 +19,24 @@ interstellar = media.Movie("Interstellar",
                      "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
                      "https://www.youtube.com/watch?v=zSWdZVtXT7E","4",[allmovies,scifi])
 
-three-idiots = media.Movie("3 idiots",
-                     "3 Idiots is a 2009 Indian coming-of-age comedy-drama film",
-                     "https://en.wikipedia.org/wiki/3_Idiots#/media/File:3_idiots_poster.jpg",
+threeidiots = media.Movie("3 idiots",
+                     "3 Idiots is a 2009 Indian comedy-drama education based film",
+                     "https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg",
                      "https://www.youtube.com/watch?v=xvszmNXdM4w","4",[allmovies,comedy,education])
 
-Hera Pheri = media.Movie("Hera Pheri",
+herapheri = media.Movie("Hera Pheri",
                      "Hera Pheri is a 2000 Indian comedy thriller film",
-                     "https://en.wikipedia.org/wiki/Hera_Pheri_(2000_film)#/media/File:Hera_Pheri_(poster).jpg",
-                     "https://www.youtube.com/watch?v=NG_geLWfo2g","4",[allmovies,comedy,education])
+                     "https://upload.wikimedia.org/wikipedia/en/5/51/Hera_Pheri_%28poster%29.jpg",
+                     "https://www.youtube.com/watch?v=1rJQQCZcq2s","4",[allmovies,comedy,education])
 
-Logan = media.Movie("Logan",
+logan = media.Movie("Logan",
                      "Logan is a 2017 American superhero film",
-                     "https://en.wikipedia.org/wiki/File:Logan_2017_poster.jpg",
+                     "https://upload.wikimedia.org/wikipedia/en/3/37/Logan_2017_poster.jpg",
                      "https://www.youtube.com/watch?v=Div0iP65aZo","4",[allmovies,scifi])
 
 
 #movies list
-movies = [toy_story, avatar, interstellar,three-idiots,Hera Pheri,Logan]
+movies = [avatar, interstellar,threeidiots,herapheri,logan,toy_story]
 
 #open_movies_page from the fresh_tomatoes formats and writes the code in html file and open it in browser
 fresh_tomatoes.open_movies_page(movies)

@@ -7,7 +7,6 @@ main_page_head = '''
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
-
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
@@ -28,7 +27,7 @@ main_page_head = '''
             right: -12px;
             z-index: 9001;
         }
-        #trailer-video {
+            #trailer-video {
             width: 100%;
             height: 100%;
         }
@@ -95,6 +94,10 @@ main_page_head = '''
             $(this).next("div").show("fast", showNext);
           });
         });
+
+        $(window).load(function (e) {
+          $('.movie-tile').show()
+        });
     </script>
 </head>
 '''
@@ -135,18 +138,17 @@ main_page_content = '''
                 <li role="presentation"><a href="#animation" aria-controls="animation" role="tab" data-toggle="tab">Animation</a></li>
                 <li role="presentation"><a href="#scifi" aria-controls="scifi" role="tab" data-toggle="tab">Sci FI</a></li>
                 <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Action</a></li>
-                <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Education</a></li>
-                <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Comedy</a></li>
+                <li role="presentation"><a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a></li>
+                <li role="presentation"><a href="#comedy" aria-controls="comedy" role="tab" data-toggle="tab">Comedy</a></li>
             </ul>                                 
-
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="home"><div class="row">{movie_tiles}</div></div>
                 <div role="tabpanel" class="tab-pane" id="animation"><div class="row">{animation_tiles}</div></div>
                 <div role="tabpanel" class="tab-pane" id="scifi"><div class="row">{scifi_tiles}</div></div>
                 <div role="tabpanel" class="tab-pane" id="action"><div class="row">{action_tiles}</div></div>
-                <div role="tabpanel" class="tab-pane" id="action"><div class="row">{education_tiles}</div></div>
-                <div role="tabpanel" class="tab-pane" id="action"><div class="row">{comedy_tiles}</div></div>
+                <div role="tabpanel" class="tab-pane" id="education"><div class="row">{education_tiles}</div></div>
+                <div role="tabpanel" class="tab-pane" id="comedy"><div class="row">{comedy_tiles}</div></div>
             </div>
         </div>   
     </div>
