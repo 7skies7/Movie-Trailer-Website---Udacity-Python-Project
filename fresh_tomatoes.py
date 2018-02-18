@@ -128,29 +128,27 @@ main_page_content = '''
       </div>
     </div>
     <div class="container">
-        
-        
-            <div>
-
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
+        <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All</a></li>
                 <li role="presentation"><a href="#animation" aria-controls="animation" role="tab" data-toggle="tab">Animation</a></li>
                 <li role="presentation"><a href="#scifi" aria-controls="scifi" role="tab" data-toggle="tab">Sci FI</a></li>
                 <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Action</a></li>
-              </ul>
+                <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Education</a></li>
+                <li role="presentation"><a href="#action" aria-controls="action" role="tab" data-toggle="tab">Comedy</a></li>
+            </ul>                                 
 
-              <!-- Tab panes -->
-              <div class="tab-content">
+            <!-- Tab panes -->
+            <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="home"><div class="row">{movie_tiles}</div></div>
                 <div role="tabpanel" class="tab-pane" id="animation"><div class="row">{animation_tiles}</div></div>
                 <div role="tabpanel" class="tab-pane" id="scifi"><div class="row">{scifi_tiles}</div></div>
                 <div role="tabpanel" class="tab-pane" id="action"><div class="row">{action_tiles}</div></div>
-              </div>
-
+                <div role="tabpanel" class="tab-pane" id="action"><div class="row">{education_tiles}</div></div>
+                <div role="tabpanel" class="tab-pane" id="action"><div class="row">{comedy_tiles}</div></div>
             </div>
-              
-        
+        </div>   
     </div>
   </body>
 </html>
@@ -159,7 +157,7 @@ main_page_content = '''
 # A single movie entry html template
 
 movie_tile_content = '''
- <div class="col-sm-6 col-md-4" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+ <div class="col-sm-6 col-md-4 movie-tile" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <div class="thumbnail">
       <img src="{poster_image_url}" width="100%" height="270">
       <div class="caption">
@@ -202,7 +200,9 @@ def open_movies_page(movies):
   rendered_content = main_page_content.format(movie_tiles=create_movie_tiles_content(movies,0),
                                               animation_tiles=create_movie_tiles_content(movies,1),
                                               scifi_tiles=create_movie_tiles_content(movies,2),
-                                              action_tiles=create_movie_tiles_content(movies,3))
+                                              action_tiles=create_movie_tiles_content(movies,3),
+                                              education_tiles=create_movie_tiles_content(movies,4),
+                                              comedy_tiles=create_movie_tiles_content(movies,5))
 
   
 
